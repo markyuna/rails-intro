@@ -1,0 +1,20 @@
+<h1>CONTACT 🚀</h1>
+<%= link_to "Home page", root_path %>
+<%= link_to "About", about_path %>
+<%= link_to "Contact", contact_path %>
+<h1>Welcome to my Home page 🚀</h1>
+
+<form action="/contact" method="get">
+  <input type="text"
+         value="<%= params[:member] %>"
+         name="member"
+         placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
